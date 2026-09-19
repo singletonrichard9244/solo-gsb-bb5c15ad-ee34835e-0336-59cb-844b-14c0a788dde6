@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { diffSchemas } from "../api.js";
+import ReleaseGate from "./ReleaseGate.jsx";
 
 const KIND_LABELS = {
   type: "类型联合变化",
@@ -175,6 +176,8 @@ export default function DiffPanel({ baseline, current, onSaveBaseline, onClearBa
                   当前筛选条件下无变更，取消「仅显示破坏性变更」查看全部。
                 </div>
               )}
+
+              <ReleaseGate diff={diff} />
 
               <div className="diff-groups">
                 {groups.map(([pointer, changes]) => (
