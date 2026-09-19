@@ -576,3 +576,121 @@ body {
   font-size: 12px;
   color: var(--muted);
 }
+
+/* ---------- release gate ---------- */
+
+.release-gate {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.release-gate__head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.release-gate__head .panel-label {
+  margin-bottom: 0;
+}
+
+.release-gate__inputs {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.release-gate__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 160px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.release-gate__arrow {
+  color: var(--muted);
+  padding-bottom: 8px;
+}
+
+.version-input {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12.5px;
+  padding: 8px 10px;
+}
+
+.version-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.release-gate .alert {
+  margin-top: 0;
+}
+
+.gate-verdict {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.gate-verdict--allow {
+  border-color: rgba(52, 201, 142, 0.35);
+  background: rgba(52, 201, 142, 0.08);
+}
+
+.gate-verdict--block {
+  border-color: rgba(242, 109, 109, 0.35);
+  background: rgba(242, 109, 109, 0.08);
+}
+
+.gate-verdict__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.gate-verdict__badge {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.gate-verdict--allow .gate-verdict__badge { color: var(--ok); }
+.gate-verdict--block .gate-verdict__badge { color: var(--err); }
+
+.gate-verdict__facts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 0 8px;
+}
+
+.gate-verdict__facts dt {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.gate-verdict__facts dd {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.gate-verdict__reason {
+  font-size: 12.5px;
+}

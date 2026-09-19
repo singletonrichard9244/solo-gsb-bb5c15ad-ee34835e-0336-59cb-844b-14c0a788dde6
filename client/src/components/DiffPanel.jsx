@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { diffSchemas } from "../api.js";
+import ReleaseGate from "./ReleaseGate.jsx";
 
 const KIND_LABELS = {
   type: "类型联合变化",
@@ -158,6 +159,8 @@ export default function DiffPanel({ baseline, current, onSaveBaseline, onClearBa
                 </span>
                 <span className="severity severity--info">{diff.summary.info} 提示</span>
               </div>
+
+              <ReleaseGate diff={diff} perspective={perspective} />
 
               {diff.changes.length === 0 && (
                 <div className="alert alert--ok">✓ 两版 Schema 完全一致，无契约变更。</div>
